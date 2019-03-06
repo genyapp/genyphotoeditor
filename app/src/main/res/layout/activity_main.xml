@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- Header, tinggi 10% -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.10"
+        android:background="#ff494949"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon" />
+        <!-- Judul aplikasi -->
+        <LinearLayout
+            android:id="@+id/frame_app_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/apps_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Genny PhotoEditor"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <!-- Tombol Load -->
+        <ImageButton
+            android:id="@+id/btn_load"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/open"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+        <!-- Tombol Save -->
+        <ImageButton
+            android:id="@+id/btn_save"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/save"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+    </LinearLayout>
+    <!-- End Header -->
+
+    <!-- Gambar, tinggi 75% -->
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:background="#ff2c2c2c"
+        android:orientation="vertical" >
+        <!-- Tempat Gambar -->
+        <ImageView
+            android:id="@+id/main_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true" />
+
+    </LinearLayout>
+    <!-- End Gambar -->
+
+    <!-- Menu, tinggi 15%-->
+    <!-- Menu Utama -->
+    <HorizontalScrollView
+        android:id="@+id/menu_utama"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="#ff494949"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ff494949"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageButton
+                android:id="@+id/btn_orientations"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/orientations"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_effects"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/effects"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_brightness"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/brightness"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_contrast"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/contrast"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_autolevel"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/autolevel"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_invers"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/invers"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_hequalization"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/hequalization"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- End Menu Utama -->
+
+    <!-- Menu Orientation -->
+    <HorizontalScrollView
+        android:id="@+id/menu_orientations"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="#ff494949"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ff494949"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_rotate90"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rotate90"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_rotate180"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rotate180"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_fliphorizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/fliphorizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_flipvertical"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/flipvertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- End Menu Orientation -->
+
+
+    <!-- Menu Effects -->
+    <HorizontalScrollView
+        android:id="@+id/menu_effecs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="#ff494949"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ff494949"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+            <ImageButton
+                android:id="@+id/btn_back2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_red"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/red"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_green"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/green"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_blue"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/blue"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_grayscaler"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/grayscaler"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_grayscaleg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/grayscaleg"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_grayscaleb"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/grayscaleb"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_grayscale"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/grayscale"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_blackwhite128"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/blackwhite128"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_blackwhiterata"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/blackwhiterata"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_blackwhiteuser"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/blackwhiteuser"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_kuantisasi16"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/kuantisasi16"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_kuantisasiuser"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/kuantisasiuser"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <ImageButton
+                android:id="@+id/btn_sephia"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sephia"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- End Menu Effects -->
+
+
+    <!-- Menu Brightness -->
+    <HorizontalScrollView
+        android:id="@+id/menu_brightness"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="#ff494949"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ff494949"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+            <ImageButton
+                android:id="@+id/btn_back3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/brightness_level"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Brightness :"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:layout_gravity="center" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/edit_brightness"
+                android:layout_gravity="center"
+                android:textColor="@color/highlighted_text_material_light"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+            <Button
+                android:id="@+id/btn_gobrightness"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@color/button_material_light"
+                android:text="Go"
+                android:textAlignment="center"
+                android:textAppearance="@color/accent_material_dark" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- End Menu Brightness -->
+
+
+    <!-- Menu Contrast -->
+    <HorizontalScrollView
+        android:id="@+id/menu_contrast"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="#ff494949"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ff494949"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+            <ImageButton
+                android:id="@+id/btn_back4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/contrast_level"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Contrast :"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:layout_gravity="center" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/edit_contrast"
+                android:layout_gravity="center"
+                android:textColor="@color/highlighted_text_material_light"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+            <Button
+                android:id="@+id/btn_gocontrast"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@color/button_material_light"
+                android:text="Go"
+                android:textAlignment="center"
+                android:textAppearance="@color/accent_material_dark" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- End Menu Contrast -->
+
+
+    <!-- Menu Black White User (submenu dari menu Effects) -->
+    <HorizontalScrollView
+        android:id="@+id/menu_blackwhiteuser"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="#ff494949"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ff494949"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+            <ImageButton
+                android:id="@+id/btn_back5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/blackwhiteuser_level"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Black White Threshold :"
+                android:textColor="#FFF"
+                android:textSize="15sp"
+                android:layout_gravity="center" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/edit_blackwhiteuser"
+                android:layout_gravity="center"
+                android:textColor="@color/highlighted_text_material_light"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+            <Button
+                android:id="@+id/btn_goblackwhiteuser"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@color/button_material_light"
+                android:text="Go"
+                android:textAlignment="center"
+                android:textAppearance="@color/accent_material_dark" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- End Menu Black White User -->
+
+    <!-- Menu Kuantisasi User (submenu dari menu Effects) -->
+    <HorizontalScrollView
+        android:id="@+id/menu_kuantisasiuser"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="#ff494949"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ff494949"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+            <ImageButton
+                android:id="@+id/btn_back6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/kuantisasiuser_level"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Kuantisasi :"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:layout_gravity="center" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/edit_kuantisasiuser"
+                android:layout_gravity="center"
+                android:textColor="@color/highlighted_text_material_light"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+            <Button
+                android:id="@+id/btn_gokuantisasiuser"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@color/button_material_light"
+                android:text="Go"
+                android:textAlignment="center"
+                android:textAppearance="@color/accent_material_dark" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- End Menu Kuantisasi User -->
+    <!-- End Menu -->
+
+</LinearLayout>
